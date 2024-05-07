@@ -58,7 +58,7 @@ https://templatemo.com/tm-589-lugx-gaming
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li><a href="index.html" class="active">Home</a></li>
-                      <li><a href="fe/views/shop.html">Our Shop</a></li>
+                      <li><a href="fe/views/shop.php">Our Shop</a></li>
                       <li><a href="fe/views/product-details.html">Product Details</a></li>
                       <li><a href="fe/views/contact.html">Contact Us</a></li>
                       <?php
