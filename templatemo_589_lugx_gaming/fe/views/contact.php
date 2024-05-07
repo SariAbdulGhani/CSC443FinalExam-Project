@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Lugx Gaming Template - Contact Page</title>
+    <title>Contact Us</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,6 +29,7 @@ https://templatemo.com/tm-589-lugx-gaming
   </head>
 
 <body>
+  <form id="contact-form" action="../be/controllers/contact.php" method="post">
 
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
@@ -93,11 +94,11 @@ https://templatemo.com/tm-589-lugx-gaming
               <h6>Contact Us</h6>
               <h2>Say Hello!</h2>
             </div>
-            <p>LUGX Gaming Template is based on the latest Bootstrap 5 CSS framework. This template is provided by TemplateMo and it is suitable for your gaming shop ecommerce websites. Feel free to use this for any purpose. Thank you.</p>
+            <p>Yummy is a vibrant and cozy restaurant known for its inventive cuisine and welcoming atmosphere. This eatery offers a diverse menu that includes both traditional favorites and unique, chef-driven creations that cater to a variety of dietary preferences. With its stylish decor and attentive service, Yummy provides a delightful dining experience for both casual outings and special occasions. Thank you.</p>
             <ul>
-              <li><span>Address</span> Sunny Isles Beach, FL 33160, United States</li>
-              <li><span>Phone</span> +123 456 7890</li>
-              <li><span>Email</span> lugx@contact.com</li>
+              <li><span>Address</span> Beirut , Bliss, United States</li>
+              <li><span>Phone</span> +961 01 444 777</li>
+              <li><span>Email</span> Yummy@contact.com</li>
             </ul>
           </div>
         </div>
@@ -155,7 +156,7 @@ https://templatemo.com/tm-589-lugx-gaming
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2048 LUGX Gaming Company. All rights reserved. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
+        <p>Copyright © 2070 Yummy resturant. All rights reserved. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank">Design: TemplateMo</a></p>
       </div>
     </div>
   </footer>
@@ -168,6 +169,8 @@ https://templatemo.com/tm-589-lugx-gaming
   <script src="../../assets/js/owl-carousel.js"></script>
   <script src="../../assets/js/counter.js"></script>
   <script src="../../assets/js/custom.js"></script>
-
+  <?php
+fun();
+?>
   </body>
 </html>
