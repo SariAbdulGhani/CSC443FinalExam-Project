@@ -76,3 +76,30 @@ function LogOut(){
     }
     session_destroy();
 }
+
+
+function GetPlats()
+{
+    global $db;
+    $Plats = array();
+
+
+    $query = "SELECT ID,PLATTER,DESCRIPTION,IMAGE,IS_ACTIVE,category	 FROM tbl_platters";
+    $stmt = $db->query($query);
+    if ($stmt->rowCount() > 0) {
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $Plat = new stdClass();
+            $Plat->ID = $row["ID"];
+            $Plat->PLATTER = $row["PLATTER"];
+            $Plat->DESCRIPTION = $row["DESCRIPTION"];
+            $Plat->IMAGE = $row["IMAGE"];
+            $Plat->IS_ACTIVE = $row["IS_ACTIVE"];
+            $Plat->category = $row["category"];
+
+            $Plats[] = $Plat;
+        }
+        return $Plats;
+    } else {
+        return 0;
+    }
+}

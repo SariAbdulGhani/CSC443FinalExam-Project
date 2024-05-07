@@ -31,14 +31,13 @@ try {
 } */
 
 $dbhost = "127.0.0.1";
-$dbname = "db_csc443_eshop";
+$dbname = "chef_system";
 $dbuser = "root";
 $dbpassword = ""; // No password provided
-$dbport = "3307"; 
 $db = null;
 
 try {
-    $dsn = "mysql:host=$dbhost;dbname=$dbname;port=$dbport;";
+    $dsn = "mysql:host=$dbhost;dbname=$dbname;";
     $options = array(
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     );
