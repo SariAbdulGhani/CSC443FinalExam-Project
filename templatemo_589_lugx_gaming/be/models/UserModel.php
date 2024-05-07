@@ -84,7 +84,7 @@ function GetPlats()
     $Plats = array();
 
 
-    $query = "SELECT ID,PLATTER,DESCRIPTION,IS_ACTIVE,category	 FROM table_platters";
+    $query = "SELECT ID,PLATTER,DESCRIPTION,IS_ACTIVE,category,price,discount	 FROM table_platters";
     $stmt = $db->query($query);
     if ($stmt->rowCount() > 0) {
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -92,6 +92,8 @@ function GetPlats()
             $Plat->ID = $row["ID"];
             $Plat->PLATTER = $row["PLATTER"];
             $Plat->DESCRIPTION = $row["DESCRIPTION"];
+            $Plat->price = $row["price"];
+            $Plat->discount = $row["discount"];
             $Plat->IS_ACTIVE = $row["IS_ACTIVE"];
             $Plat->category = $row["category"];
 
