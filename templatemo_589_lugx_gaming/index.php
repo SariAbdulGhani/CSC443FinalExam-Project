@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
 <!--
 
 TemplateMo 589 lugx gaming
@@ -60,7 +61,10 @@ https://templatemo.com/tm-589-lugx-gaming
                       <li><a href="fe/views/shop.html">Our Shop</a></li>
                       <li><a href="fe/views/product-details.html">Product Details</a></li>
                       <li><a href="fe/views/contact.html">Contact Us</a></li>
-                      <li><a href="#">Sign In</a></li>
+                      <?php
+                          require_once("fe/views/views/Authenticate_LogOut.php");
+                          SignIn_LogOut();
+                      ?>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
