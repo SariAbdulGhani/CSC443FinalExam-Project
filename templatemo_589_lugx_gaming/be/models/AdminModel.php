@@ -8,7 +8,7 @@ function Login($un, $pass)
             $password = $_POST["password"];
 
             global $db;
-            $query = "SELECT ID,FIRST_NAME,LAST_NAME FROM tbl_users WHERE USERNAME='$un' AND PASSWORD='$pass' AND IS_ACTIVE=1";
+            $query = "SELECT ID,FIRST_NAME,LAST_NAME FROM Admins WHERE USERNAME='$un' AND PASSWORD='$pass' AND IS_ACTIVE=1";
             $stmt = $db->query($query);
             $row = 0;
             if ($stmt->rowCount() > 0) {
@@ -38,14 +38,14 @@ function SignUp($un, $fname, $lname, $pass) {
 
             global $db;
 
-            $query = "SELECT ID FROM tbl_users WHERE USERNAME='$un'";
+            $query = "SELECT ID FROM Admins WHERE USERNAME='$un'";
             $stmt = $db->query($query);
             if ($stmt->rowCount() > 0) {
                 echo "usernameExists";
                 return;
             }
 
-            $query = "SELECT ID FROM tbl_users WHERE PASSWORD='$pass'";
+            $query = "SELECT ID FROM Admins WHERE PASSWORD='$pass'";
             $stmt = $db->query($query);
             if ($stmt->rowCount() > 0) {
                 echo "already exists password";
@@ -54,7 +54,7 @@ function SignUp($un, $fname, $lname, $pass) {
 
             // Insert new user into database
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-            $query = "INSERT INTO tbl_users (USERNAME, FIRST_NAME, LAST_NAME, PASSWORD, IS_ACTIVE) VALUES ('$username', '$firstName', '$lastName', '$hashedPassword', 1)";
+            $query = "INSERT INTO Admins (USERNAME, FIRST_NAME, LAST_NAME, PASSWORD, IS_ACTIVE) VALUES ('$username', '$firstName', '$lastName', '$hashedPassword', 1)";
             $stmt = $db->query($query);
             if ($stmt) {
                 session_start();

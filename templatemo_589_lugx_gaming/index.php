@@ -19,7 +19,90 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <style>
 
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; 
+    top: -15%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#successText {
+    position: fixed;
+    background-color: #eeeeee;
+    padding: 10px; 
+    border-radius: 5px; 
+    top: 5px; 
+    right: 80px; 
+    z-index: 6; 
+    text-align: center;
+}
+
+#successText p {
+    color: black; 
+    font-size: 14px;
+    vertical-align: middle; 
+    margin: 0;
+}
+
+#successTick {
+    color: red; 
+    font-size: 24px;
+}
+.hidden {
+    display: none;
+}
+.button-click,
+.button-click:focus {
+font-size: 14px;
+color: #fff;
+background: var(--color-primary);
+padding: 8px 20px;
+margin-left: 30px;
+border-radius: 50px;
+transition: 0.3s;
+}
+
+.button-click:hover,
+.button-click:focus:hover {
+color: #fff;
+background: rgba(206, 18, 18, 0.8);
+}
+.models_link{
+    margin-left: 5px; 
+    color: rgba(206, 18, 18, 0.8); 
+    cursor: pointer;
+}
+</style>
 <!--
 
 TemplateMo 589 lugx gaming
@@ -62,8 +145,11 @@ https://templatemo.com/tm-589-lugx-gaming
                       <li><a href="fe/views/product-details.html">Product Details</a></li>
                       <li><a href="fe/views/contact.html">Contact Us</a></li>
                       <?php
-                          require_once("fe/views/views/Authenticate_LogOut.php");
+                          require_once("fe/controllers/AdminController.php");
+                          require_once("fe/views/Authenticate_LogOut.php");
                           SignIn_LogOut();
+                          LogIn_Form();
+                          ScriptLogin();
                       ?>
                   </ul>   
                     <a class='menu-trigger'>

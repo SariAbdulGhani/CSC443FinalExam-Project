@@ -59,7 +59,7 @@ function ScriptLogin(){
             }
             $.ajax({
                 type: "POST",
-                url: "../Yummy/be/controllers/Log_In.php",
+                url: "../templatemo_589_lugx_gaming/be/controllers/Log_In.php",
                 data: $(this).serialize(),
                 success: function (response) {
                     $("#responseMsg").html(response);
@@ -169,7 +169,7 @@ function ScriptSignUp(){
             }
             $.ajax({
                 type: "POST",
-                url: "../Yummy/be/controllers/Sign_Up.php",
+                url: "../templatemo_589_lugx_gaming/be/controllers/Sign_Up.php",
                 data: $(this).serialize(),
                 success: function (response) {
                     $("#responseMsg2").html(response);
@@ -237,7 +237,7 @@ function ScriptLogOut(){
         logout.addEventListener('click', function() {
             $.ajax({
                 type: "POST",
-                url: "../Yummy/be/controllers/Log_Out.php", 
+                url: "../templatemo_589_lugx_gaming/be/controllers/Log_Out.php", 
                 data: { action: "LOGOUT" }, 
                 success: function(response) {
                         location.reload();
@@ -253,20 +253,4 @@ function ScriptLogOut(){
 } 
 ?>
 
-<?php 
-function ScriptBook(){
-    ?>
-   <script>
-    function preventFormSubmission(event) {
-        event.preventDefault();
-        var modal = document.getElementById("myModal3");
-        modal.style.display = "block"; 
-        var span = modal.querySelector(".close");
-            span.onclick = function () {
-                modal.style.display = "none";
-            }   
-        }
-    </script> 
-<?php
-} 
-?>
+

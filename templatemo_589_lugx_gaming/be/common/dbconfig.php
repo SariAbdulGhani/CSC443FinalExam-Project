@@ -14,7 +14,7 @@ try{
 
 /*
 $dbhost = "127.0.0.1";
-$dbname = "db_csc443_eshop";
+$dbname = "chef_system";
 $dbuser = "root";
 $dbpassword = ""; 
 $db = null;
@@ -31,9 +31,9 @@ try {
 } */
 
 $dbhost = "127.0.0.1";
-$dbname = "db_csc443_eshop";
+$dbname = "chef_system";
 $dbuser = "root";
-$dbpassword = ""; // No password provided
+$dbpassword = ""; 
 $dbport = "3307"; 
 $db = null;
 

@@ -1,6 +1,6 @@
 <?php
 require_once("../common/dbconfig.php");
-require_once("../models/userModel.php");
+require_once("../models/AdminModel.php");
 
 
 
